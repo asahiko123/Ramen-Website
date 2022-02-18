@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/destyle.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>麺処 い沢</title>
 </head>
 <body>
@@ -14,16 +15,49 @@
         </div>
         <div class="nav-menu">
             <ul>
-                <li class="nav-item"><a href="#">お店について</a></li>    
-                <li class="nav-item"><a href="#">メニュー</a></li>
-                <li class="nav-item"><a href="#">スタッフ募集</a></li>
+                <li class="nav-item"><a href="#">お店について<span class="en">about us</span></a></li>    
+                <li class="nav-item"><a href="#">メニュー<span class="en">menu</span></a></li>
+                <li class="nav-item"><a href="#">スタッフ募集<span class="en">recluit</span></a></li>
+                <li class="nav-item"><a href="#">現地案内図<span class="en">access</span></a></li>
+                <li class="nav-item"><a href="#">お問い合わせ<span class="en">contact</span></a></li>
+                <li class="nav-item reserve"><a href="#">来店予約<span class="en">reservation</span></a></li>
             </ul>
         </div>
     </header>
     <main>
-        <div class="hero-container">
-            <div class="content">
-                <p>最高の一杯を、届けたい。</p>
+        <img src="resource/img/open.png" alt="" class="open">
+        <div class="container">
+            <div class="carousel">
+                <!-- <p>最高の一杯を、届けたい。</p> -->
+                <ul class="carousel-area">
+                   <li class="carousel-list"><img src="resource/img/inside.jpg" alt="" class="carousel-img"></li>
+                   <li class="carousel-list"><img src="resource/img/inside.jpg" alt="" class="carousel-img"></li>
+                   <li class="carousel-list"><img src="resource/img/jirou.jpg" alt="" class="carousel-img"></li>
+                </ul>
+                <div class="arrow-wrap">
+                    <div class="arrow-right">
+                        <button class="arrow-btn js-btn-back" type="button"></button>
+                    </div>
+                    <div class="arrow-left">
+                        <button class="arrow-btn js-btn-next" type="button"></button>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <span class="pagination-circle target"></span>
+                    <span class="pagination-circle"></span>
+                    <span class="pagination-circle"></span>
+                    
+                </div>
+            </div>
+            <div class="infoArea">
+                <h4>最新のお知らせ</h4>
+                <div class="infoArea-block">
+                    <div class="info-content">
+                        <span class="info-title">【吹田市千里山】×【創作ラーメン】×【新規オープン】</span>
+                        <span class="info-str">暖かいラーメンと丁寧な接客でお客様をお迎えします。スタッフ一同心からお待ちしております。</span>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -59,5 +93,6 @@
     <footer>
         <p>&copy;HIROKI ASAHINA</p>
     </footer>
+    <script type ="text/javascript"src="js/changeslide.js"></script>
 </body>
 </html>
