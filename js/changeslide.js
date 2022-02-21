@@ -2,63 +2,40 @@ $(function(){
 
 
     $('.slider').slick({
-        autoplay: true,         //自動再生
-        autoplaySpeed: 2000,//自動再生のスピード
-        speed: 800,      //スライドするスピード
-        dots: true,//スライドしたのドット
-        arrows: true,          //左右の矢印
-        infinite: true,//スライドのループ
-        pauseOnHover: false,   //ホバーしたときにスライドを一時停止しない　
+        autoplay: true,         
+        autoplaySpeed: 2000,
+        speed: 800,      
+        dots: true,
+        arrows: true,        
+        infinite: true,
+        pauseOnHover: false,  
         centerMode: true,
         centerPadding: '25%',
     });
+    
+    $(window).scroll(function(){
+      
 
 
-    // let width = $('.carousel-list').outerWidth(true);
-    // let length = $('.carousel-list').length;
-    // let slideArea = width * length;
-    // $('.carousel-area').css('width',slideArea);
+        let scroll = $(window).scrollTop();
+        let height = $(window).height();
 
-    // let slideCurrent = 0;
-    // let lastCurrent = $('.carousel-list').length -1;
+       
 
-    //スライド切り替わり　左にずれる
+        $('.fadein').each(function(){
 
-    // function changeslide(){
-    //     $('.carousel-area').stop().animate({
-    //         left: slideCurrent * -width
-    //     })
+            let element =$(this).offset().top;
 
-        //pagination
 
-    //     let pagination = slideCurrent + 1;
-    //     $('.pagination-circle').removeClass('target');
-    //     $(".pagination-circle:nth-of-type("+ pagination +")").addClass('target');
-    // };
-
-    //ボタンクリック時にchangeslideを呼び出す
-
-    // $('.js-btn-next').click(function(){
-        
-    //     if(slideCurrent === lastCurrent){
-    //         console.log('aaa');
-    //         slideCurrent = 0;
-    //         changeslide();
-    //     }else{
-    //         console.log('bbbb');
-    //         slideCurrent++;
-    //         changeslide();
-    //     };
-    // });
-
-    // $('.js-btn-back').click(function(){
-        
-    //     if(slideCurrent === 0){
-    //         slideCurrent  = lastCurrent;
-    //         changeslide();
-    //     }else{
-    //         slideCurrent--;
-    //         changeslide();
-    //     }
-    // });
+            if(scroll > element - height + 100){
+                $(function(){
+                    $('.fadein').each(function(i){
+                        $(this).delay(i * 200).queue(function(){
+                            $(this).addClass('active');
+                        });
+                    });
+                });
+            }
+        });
+    });
 });

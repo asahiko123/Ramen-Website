@@ -7,6 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 html {
   height: 100%;
 }
@@ -35,8 +36,10 @@ header .nav-menu {
   width: 50%;
 }
 
-header .nav-menu .nav-item.reserve {
-  background-image: url(../resource/img/reserve.jpg);
+header .nav-menu .nav-item .msg {
+  color: red;
+  margin-right: 15px;
+  font-weight: bold;
 }
 
 header .nav-menu ul {
@@ -88,11 +91,11 @@ header .nav-menu ul li a::after {
   bottom: 0;
   content: '';
   left: 0;
-  height: 1px;
+  height: 2px;
   -webkit-transition: .5s all;
   transition: .5s all;
   width: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: #c0d500;
 }
 
 header .nav-menu ul li a:hover::after {
@@ -125,7 +128,7 @@ header .nav-menu ul li span {
 }
 
 main {
-  margin: 50px auto;
+  margin: 20px auto;
   height: 100%;
   overflow: hidden;
 }
@@ -143,7 +146,7 @@ main .container {
   position: relative;
   background-size: cover;
   background-position: center;
-  height: 600px;
+  height: 400px;
 }
 
 main .container .carousel {
@@ -304,7 +307,7 @@ main .container .carousel .pagination .pagination-circle.target {
 
 main .container .infoArea {
   width: 100%;
-  margin-top: 150px;
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,6 +315,18 @@ main .container .infoArea {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+}
+
+main .container .infoArea .rules {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid red;
+  text-align: center;
+}
+
+main .container .infoArea .rules .rulesBlock {
+  padding: 20px;
+  color: red;
 }
 
 main .container .infoArea h4 {
@@ -349,6 +364,14 @@ main .container .infoArea .infoArea-block .info-content {
   background-color: white;
 }
 
+main .container .infoArea .infoArea-block .info-content .info-open {
+  padding: 20px 20px;
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  color: #ff0000;
+}
+
 main .container .infoArea .infoArea-block .info-content .info-title {
   padding: 20px 20px;
   font-size: 2rem;
@@ -358,7 +381,7 @@ main .container .infoArea .infoArea-block .info-content .info-title {
 }
 
 main .container .infoArea .infoArea-block .info-content .info-str {
-  padding: 50px 20px;
+  padding: 20px 20px;
   font-family: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
@@ -371,104 +394,87 @@ main .contents-wrapper {
       -ms-flex-flow: column;
           flex-flow: column;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 742px;
   width: 100%;
 }
 
-main .contents-wrapper h2 {
-  padding: 20px 0;
-  font-weight: lighter;
+main .contents-wrapper .menu {
+  margin-top: 100px;
 }
 
-main .contents-wrapper .local-item {
+main .contents-wrapper .service {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 200px;
-  margin-bottom: 100px;
-}
-
-main .contents-wrapper .local-item img {
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-}
-
-main .contents-wrapper .local-item > p {
-  width: 40%;
-  height: auto;
-  margin-left: 20px;
-}
-
-main .contents-wrapper .menu {
+  margin-top: 50px;
   height: 100%;
-  margin: 550px 0 0 0;
+  width: 100%;
 }
 
-main .contents-wrapper .menu .menu-upper {
+main .contents-wrapper h4 {
+  padding: 20px 0;
+  font-weight: 100;
+  font-size: 2.4rem;
+  font-family: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+main .contents-wrapper .local-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  background: url(../resource/img/men.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  height: 600px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+  margin: 0 25px;
 }
 
-main .contents-wrapper .menu .menu-upper > p {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  color: white;
+main .contents-wrapper .local-item.fadein {
+  opacity: 0;
+  -webkit-transition: .7s ease-in-out;
+  transition: .7s ease-in-out;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+main .contents-wrapper .local-item.fadein.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+main .contents-wrapper .local-item img {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+main .contents-wrapper .local-item > p {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  line-height: 2.0rem;
+  font-size: 1.0rem;
   font-family: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
-main .contents-wrapper .menu .menu-middle {
-  background: url(../resource/img/jirou.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  height: 600px;
+main .contents-wrapper .local-item p.title-num {
+  color: #C0D500;
+  font-size: 1.6rem;
+  padding-bottom: 0.8rem;
 }
 
-main .contents-wrapper .menu .menu-middle > p {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  color: white;
+main .contents-wrapper .local-item p.title {
+  color: #00461D;
   font-family: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-}
-
-main .contents-wrapper .menu .menu-bottom {
-  background: url(../resource/img/pasuta.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  height: 600px;
-}
-
-main .contents-wrapper .menu .menu-bottom > p {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  color: white;
-  font-family: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size: 1.6rem;
 }
 
 footer {

@@ -21,10 +21,15 @@ header{
         justify-content: flex-end;
         width: 50%;
 
-        & .nav-item.reserve{
-            background-image: url(../resource/img/reserve.jpg);
-            
+      
+
+        & .nav-item .msg{
+            color:red;
+            margin-right: 15px;
+            font-weight: bold;
         }
+
+        
 
         & ul{
             display: flex;
@@ -61,10 +66,10 @@ header{
                         bottom: 0;
                         content: '';
                         left: 0;
-                        height: 1px;
+                        height: 2px;
                         transition: .5s all;
                         width: 0;
-                        background: rgba(#000000,0.6); 
+                        background: rgba(#C0D500,1.0); 
                         
                     }
 
@@ -105,7 +110,7 @@ header{
 
 main{
 
-    margin: 50px auto;
+    margin: 20px auto;
     height:100%;
     overflow: hidden;
 
@@ -122,7 +127,7 @@ main{
         position: relative;
         background-size:cover;
         background-position: center;
-        height: 600px;
+        height: 400px;
         
 
         & .carousel{
@@ -295,9 +300,21 @@ main{
         & .infoArea{
             width: 100%;
 
-            margin-top: 150px;
+            margin-top: 50px;
             display: flex;
             flex-flow: column;
+
+            & .rules{
+                width:50%;
+                margin: 0 auto;
+                border: 1px solid red;
+                text-align:center;
+
+                & .rulesBlock{
+                    padding: 20px ;
+                    color: red;
+                }
+            }
             
             & h4{
 
@@ -327,6 +344,14 @@ main{
                     text-align: center;
                     background-color: white;
 
+                    & .info-open{
+                        padding: 20px 20px;
+                        font-size: 2rem;
+                        font-weight: 900;
+                        @include fontfamily-Noto;
+                        color: #ff0000
+                    }
+
 
                     & .info-title{
                         padding: 20px 20px;
@@ -338,7 +363,7 @@ main{
                     }
 
                     & .info-str{
-                        padding: 50px 20px;
+                        padding: 20px 20px;
                         @include fontfamily-Noto;
                     }
 
@@ -357,120 +382,83 @@ main{
         display: flex;
         flex-flow: column;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 742px;
 
         width:100%;
+
+        & .menu{
+            margin-top: 100px;
+        }
+
+        & .service{
+            display:flex;
+            justify-content: center;
+            margin-top: 50px;
+            height:100%;
+            width: 100%;
+            
+        }
         
 
-        & h2{
+        & h4{
             padding: 20px 0;
-            font-weight: lighter;
+            font-weight: 100;
+            font-size:2.4rem;
+            @include fontfamily-Noto;
         }
         
 
         & .local-item{
 
             display: flex;
-            justify-content: center;
+            flex-flow: column;
             align-items: center;
-            height: 200px;
-            margin-bottom: 100px;
+            width: 20%;
+            margin: 0 25px;
+
+
+            &.fadein{
+                opacity : 0;
+                transition: .7s ease-in-out ;
+                transform: translateY(30px);
+
+                &.active{
+                    opacity : 1;
+                    transform: translateY(0);
+                }
+            }
+            
 
             & img{
-                width:10rem;
-                height:10rem;
-                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                margin-top:20px;
             }
 
             & > p{
-                width: 40%;
+                width: 100%;
                 height: auto;
-                margin-left: 20px;
+                margin-top: 10px;
+                line-height: 2.0rem;
+                font-size: 1.0rem;
+                @include fontfamily-Noto;
                 
+            }
+
+            & p.title-num{
+                color:#C0D500;
+                font-size: 1.6rem;
+                padding-bottom: 0.8rem;
+            }
+
+            & p.title{
+
+                color:#00461D;
+                @include fontfamily-Noto;
+                font-size: 1.6rem;
             }
         }
 
-        & .menu {
-
-            height: 100%;
-            margin: 550px 0 0 0;
-
-            & .menu-upper{
-
-                display: flex;
-                justify-content: flex-end;
-                background: url(../resource/img/men.jpg);
-                background-attachment: fixed;
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-
-                position:relative;
-                height:600px;
-
-                &>p{
-
-                    position:absolute;
-                    left:50%;
-                    top: 50%;
-                    color:rgb(255, 255, 255);
-                    @include fontfamily-Noto;
-
-                }
-            }
-
-
-            & .menu-middle{
-                background: url(../resource/img/jirou.jpg);
-
-
-                background-attachment: fixed;
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-
-                position:relative;
-                height:600px;
-
-
-                &>p{
-
-                    position:absolute;
-                    left:50%;
-                    top: 50%;
-                    color:white;
-                    @include fontfamily-Noto;
-
-                }
-                
-            }
-
-            & .menu-bottom{
-                background: url(../resource/img/pasuta.jpg);
-
-
-                background-attachment: fixed;
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-
-                position:relative;
-                height:600px;
-
-
-                &>p{
-
-                    position:absolute;
-                    left:50%;
-                    top: 50%;
-                    color:white;
-                    @include fontfamily-Noto;
-
-                }
-                
-            }
-
-        }
     }
 
     
