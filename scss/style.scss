@@ -128,14 +128,20 @@ main{
         & .carousel{
             // background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0));
             height: 400px;
-            width: 1000px;
+            width: 100%;
             margin: 0 auto;
             position: relative;
+
+            
 
             & ul.carousel-area{
                 position:absolute;
                 left: 0;
                 margin: 0;
+            }
+
+            & ul.slider{
+                padding-left: 0;
             }
 
             & .arrow-wrap{
@@ -186,8 +192,8 @@ main{
                 -moz-appearance: none;
                 appearance: none;
                 vertical-align: middle;
-                color: inherit;
-                font: inherit;
+                // color: inherit;
+                // font: inherit;
                 border: 0;
                 background: transparent;
                 padding: 0;
@@ -224,6 +230,8 @@ main{
                 display:flex;
                 position: absolute;
 
+            
+
                 & li.carousel-list{
                     width: 862px;
                     height: 100%;
@@ -246,18 +254,18 @@ main{
                         background-image:url(../resource/img/jirou.jpg);
                     }
 
-                    & .carousel-img {
-                        width: 1px;
-                        height: 1px;
-                        clip: rect(1px,1px,1px,1px);
-                        -webkit-clip-path: inset(50%);
-                        clip-path: inset(50%);
-                        margin: -1px;
-                        padding: 0;
-                        overflow: hidden;
-                        position: absolute;
+                    // & .carousel-img {
+                        // width: 1px;
+                        // height: 1px;
+                        // clip: rect(1px,1px,1px,1px);
+                        // -webkit-clip-path: inset(50%);
+                        // clip-path: inset(50%);
+                        // margin: -1px;
+                        // padding: 0;
+                        // overflow: hidden;
+                        // position: absolute;
 
-                      }
+                    //   }
                 }
             }
 

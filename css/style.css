@@ -148,7 +148,7 @@ main .container {
 
 main .container .carousel {
   height: 400px;
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   /* ボタンタグの装飾リセット */
@@ -158,6 +158,10 @@ main .container .carousel ul.carousel-area {
   position: absolute;
   left: 0;
   margin: 0;
+}
+
+main .container .carousel ul.slider {
+  padding-left: 0;
 }
 
 main .container .carousel .arrow-wrap {
@@ -215,8 +219,6 @@ main .container .carousel button {
   -moz-appearance: none;
   appearance: none;
   vertical-align: middle;
-  color: inherit;
-  font: inherit;
   border: 0;
   background: transparent;
   padding: 0;
@@ -276,18 +278,6 @@ main .container .carousel .carousel-area li.carousel-list:nth-child(2) {
 
 main .container .carousel .carousel-area li.carousel-list:nth-child(3) {
   background-image: url(../resource/img/jirou.jpg);
-}
-
-main .container .carousel .carousel-area li.carousel-list .carousel-img {
-  width: 1px;
-  height: 1px;
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  position: absolute;
 }
 
 main .container .carousel .pagination {
