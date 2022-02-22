@@ -12,15 +12,25 @@ $(function(){
         centerMode: true,
         centerPadding: '25%',
     });
+
+
+    let pagetop = $('#pagetop');
+    let open = $('.open');
+    console.log(pagetop);
+    pagetop.hide();
     
     $(window).scroll(function(){
+
+        if($(this).scrollTop() > 100){
+            pagetop.fadeIn();
+            open.fadeOut();
+        }else{
+            pagetop.fadeOut();
+            open.fadeIn();
+        }
       
-
-
         let scroll = $(window).scrollTop();
         let height = $(window).height();
-
-       
 
         $('.fadein').each(function(){
 
@@ -37,5 +47,6 @@ $(function(){
                 });
             }
         });
+        
     });
 });
